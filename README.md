@@ -55,3 +55,18 @@ filter @type = "REPORT"
 | stats avg(@duration), max(@duration), min(@duration), pct(@duration, 90), count(@duration) by bin(5m)
 ````
 ![lambdaperformance](./images/lambdaperformance.png)
+
+# Exclude informational logs
+
+Excludes common informational logs to report only the errors. In this example it highlights errors:
+````
+fields @timestamp, @message
+| sort @timestamp desc
+| filter @message not like 'EXTENSION'
+| filter @message not like 'Lambda Insights'
+| filter @message not like 'INFO'
+| filter @message not like 'REPORT'
+| filter @message not like 'END'
+| filter @message not like 'START'
+````
+![excludeinformational](./images/excludeinformational.png)

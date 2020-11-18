@@ -2,7 +2,7 @@
 Example queries using [Amazon CloudWatch Logs Insight](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) for Serverless applications.
 
 - [Serverless Amazon CloudWatch Logs Insights Examples](#serverless-amazon-cloudwatch-logs-insights-examples)
-	- [Query most recent 100 errors](#query-most-recent-100-errors)
+- [Query most recent 100 errors](#query-most-recent-100-errors)
 - [Top 100 most expensive invocations](#top-100-most-expensive-invocations)
 - [Cold start percentage over time](#cold-start-percentage-over-time)
 - [Cold starts and InitDuration](#cold-starts-and-initduration)
